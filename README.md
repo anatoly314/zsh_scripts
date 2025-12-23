@@ -78,3 +78,61 @@ k8s -h
 ```
 
 This will display the usage and available options.
+
+---
+
+# T8S - Talos Configuration Tool (t8s.sh)
+
+Similar to k8s.sh but for managing TALOSCONFIG environment variable and running `talosctl dashboard`.
+
+## Installation
+
+Add to your `.zshrc`:
+
+```bash
+source ~/.zsh_scripts/t8s.sh
+```
+
+## Usage
+
+To select a talosconfig and run dashboard:
+
+```bash
+t8s
+```
+
+To select a talosconfig from `~/.talos` directory:
+
+```bash
+t8s -s
+```
+
+To display the content of the TALOSCONFIG file:
+
+```bash
+t8s -d
+```
+
+To display the path of the TALOSCONFIG file:
+
+```bash
+t8s -e
+```
+
+To unset the TALOSCONFIG environment variable:
+
+```bash
+t8s -u
+```
+
+To set TALOSCONFIG to a specific file:
+
+```bash
+t8s /path/to/your/talosconfig
+```
+
+For help:
+
+```bash
+t8s -h
+```
